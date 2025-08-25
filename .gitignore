@@ -1,0 +1,28 @@
+# Ignore SSH keys
+azureagent_key
+azureagent_key.pub
+
+# Terraform local files
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform lock file (you don’t want to commit local provider versions)
+.terraform.lock.hcl
+
+# Terragrunt cache
+.terragrunt-cache/
+
+# Sensitive files
+*.pem
+*.key
+*.crt
+
+# OS junk files
+.DS_Store
+Thumbs.db
