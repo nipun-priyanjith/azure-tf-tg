@@ -1,9 +1,4 @@
 
-# provider "azurerm" {
-#   features {}
-#   subscription_id = "59dc8f71-b8aa-4522-ad76-b95085db75b6"   # replace with your subscription ID
-#   tenant_id       = "b2c71087-76c3-447c-83b9-1565949aa0e1"   # replace with your tenant ID
-# }
 
 # locals {
 #   dns_prefix = "${var.cluster_name}-dns"
