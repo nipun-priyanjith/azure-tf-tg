@@ -4,8 +4,8 @@ terraform {
     commands = ["init", "plan", "apply", "destroy"]
 
     arguments = [
-      "-var", "subscription_id=",
-      "-var", "tenant_id="
+      "-var", "subscription_id=yourid",
+      "-var", "tenant_id=youerid"
     ]
   }
 }
