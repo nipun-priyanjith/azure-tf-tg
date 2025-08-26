@@ -1,0 +1,7 @@
+adminUser: admin
+adminPassword: grafana123
+service:
+  type: LoadBalancer
+persistence:
+  enabled: true
+  size: 5Gi
