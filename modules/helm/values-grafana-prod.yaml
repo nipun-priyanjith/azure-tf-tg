@@ -1,0 +1,5 @@
+replicas: 3
+service:
+  type: LoadBalancer
+adminUser: admin
+adminPassword: strongprodpassword

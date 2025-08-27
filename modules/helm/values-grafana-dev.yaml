@@ -1,0 +1,5 @@
+replicas: 1
+service:
+  type: LoadBalancer
+adminUser: admin
+adminPassword: devpassword
