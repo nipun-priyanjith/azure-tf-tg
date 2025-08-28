@@ -9,7 +9,12 @@ inputs = {
   env = "dev"
   #kubeconfig_path = "C:/Users/HP/.kube/config"
   kubeconfig_raw = dependency.aks.outputs.kubeconfig
-  
+  # name          = "kafka"
+  # namespace     = "kafka"
+  # chart         = "kafka"
+  # repo          = "https://charts.bitnami.com/bitnami"
+  # #chart_version = "26.3.0"
+  # values        = ["${path_relative_from_include()}/values.yaml"]
 }
 
 

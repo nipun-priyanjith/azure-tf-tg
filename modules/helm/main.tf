@@ -51,6 +51,28 @@ resource "helm_release" "prometheus" {
 
 }
 
+# resource "helm_release" "this" {
+#   name       = var.name
+#   repository = var.repo
+#   chart      = var.chart
+#   #version    = var.chart_version
+#   namespace  = var.namespace
+
+#   values = var.values
+# }
+# --- KAFKA ---
+# --- KAFKA via Git ---
+resource "helm_release" "kafka" {
+  name             = "kafka"
+  repository       = "https://charts.bitnami.com/bitnami"  # Helm repo URL
+  chart            = "kafka"
+  namespace        = "kafka"
+  create_namespace = true
+  version          = "30.0.0"  # specify a valid chart version
+
+  values = [file("${path.module}/values-kafka-${var.env}.yaml")]
+}
+
 
 
 

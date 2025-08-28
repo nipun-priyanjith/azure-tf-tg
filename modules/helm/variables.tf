@@ -11,3 +11,15 @@ variable "kubeconfig_path" {
 #   type        = string
 #   description = "Raw kubeconfig content from AKS"
 # }
+
+
+
+# variable "name" {}
+# variable "repo" {}
+# variable "chart" {}
+# variable "chart_version" {}
+# variable "namespace" {}
+# variable "values" {
+#   type    = list(string)
+#   default = []
+# }
