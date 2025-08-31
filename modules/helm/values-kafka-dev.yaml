@@ -1,10 +1,55 @@
+## Bitnami Kafka Helm chart values for dev
+
+## Number of Kafka brokers
 replicaCount: 1
 
-zookeeper:
-  replicaCount: 1
-
+## Disable persistent storage (good for dev/test)
 persistence:
   enabled: false
 
+## Kafka listener settings
+listeners:
+  client:
+    protocol: PLAINTEXT
+
+## Allow PLAINTEXT connections inside the cluster
+allowPlaintextListener: true
+
+## Service type for external access
 service:
-  type: LoadBalancer
+  type: NodePort
+  nodePorts:
+    client: 31090  # external access via <NodeIP>:31090
+
+## Zookeeper (required for Kafka)
+zookeeper:
+  enabled: true
+  replicaCount: 1
+  persistence:
+    enabled: false
+
+## Resources (low for dev)
+resources:
+  requests:
+    memory: 512Mi
+    cpu: 250m
+  limits:
+    memory: 1Gi
+    cpu: 500m
+
+## Authentication disabled for simplicity (only for dev!)
+auth:
+  clientProtocol: plaintext
+
+
+
+# replicaCount: 1
+
+# zookeeper:
+#   replicaCount: 1
+
+# persistence:
+#   enabled: false
+
+# service:
+#   type: LoadBalancer
