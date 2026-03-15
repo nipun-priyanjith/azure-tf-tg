@@ -21,6 +21,11 @@ dependency "network" {
   config_path = "../network"
 }
 
+dependencies {
+  paths = ["../network", "../security"]
+}
+
+
 # dependency "security" {
 #   config_path = "../security"
 # }
